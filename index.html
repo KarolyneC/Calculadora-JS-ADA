@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -13,41 +14,35 @@
             <h1>Calculadora Criada por Karolyne Carvalho</h1>
             <div class="calculadora">
                 <h1>Calculadora</h1>
-                <p id="resultado"></p>
-                <table>
-                    <tr>
-                        <td><button>C</button></td>
-                        <td><button><</button></td>
-                        <td><button>/</button></td>
-                        <td><button>*</button></td>
-                    </tr>
-                    <tr>
-                        <td><button>7</button></td>
-                        <td><button>8</button></td>
-                        <td><button>9</button></td>
-                        <td><button>-</button></td>
-                    </tr>
-                    <tr>
-                        <td><button>4</button></td>
-                        <td><button>5</button></td>
-                        <td><button>6</button></td>
-                        <td><button>+</button></td>
-                    </tr>
-                    <tr>
-                        <td><button>1</button></td>
-                        <td><button>2</button></td>
-                        <td><button>3</button></td>
-                        <td><button>=</button></td>
-                    </tr>
-                    <tr>
-                        <td><button>0</button></td>
-                        <td><button>.</button></td>
-                    </tr>
-                </table>
+                <p id="resultado">Digite um Valor</p> 
+                <div class="buttons-grid">
+                    <button onclick="clearResult()">C</button>
+                    <button onclick="deleteLast()">&#60;</button>
+                    <button onclick="appendOperator('/')">/</button>
+                    <button onclick="appendOperator('*')">*</button>
+                    <button onclick="appendNumber(7)">7</button>
+                    <button onclick="appendNumber(8)">8</button>
+                    <button onclick="appendNumber(9)">9</button>
+                    <button onclick="appendOperator('-')">-</button>
+                    <button onclick="appendNumber(4)">4</button>
+                    <button onclick="appendNumber(5)">5</button>
+                    <button onclick="appendNumber(6)">6</button>
+                    <button onclick="appendOperator('+')">+</button>
+                    <button onclick="appendNumber(1)">1</button>
+                    <button onclick="appendNumber(2)">2</button>
+                    <button onclick="appendNumber(3)">3</button>
+                    <button onclick="calculateResult()">=</button>
+                    <button onclick="appendNumber(0)">0</button>
+                    <button onclick="appendOperator('.')">.</button>
+                </div>
             </div>
         </div>
     </main>
+    <script src="index.js"></script> 
+    
+  <!-- Ajudado por Gabriel Oliveira
+     https://github.com/OliveiraStrategic-->
 
-</body>
+    </body>
 
-</html>
+    </html>

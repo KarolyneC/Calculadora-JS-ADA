@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>Calculadora JS</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 
 <body>
@@ -13,8 +14,11 @@
         <div class="fundo">
             <h1>Calculadora Criada por Karolyne Carvalho</h1>
             <div class="calculadora">
-                <h1>Calculadora</h1>
-                <p id="resultado">Digite um Valor</p> 
+                <h3>Calculadora</h3>
+                <div id="operations">
+                    <div id="previous-operation"></div>
+                    <div id="current-operation">0</div> <!-- Mantenha 0 como valor inicial -->
+                </div>
                 <div class="buttons-grid">
                     <button onclick="clearResult()">C</button>
                     <button onclick="deleteLast()">&#60;</button>
@@ -38,11 +42,9 @@
             </div>
         </div>
     </main>
-    <script src="script.js"></script> 
-    
-  <!-- Ajudado por Gabriel Oliveira
-     https://github.com/OliveiraStrategic-->
 
-    </body>
+    <!-- Ajudado por Gabriel Oliveira https://github.com/OliveiraStrategic -->
 
-    </html>
+</body>
+
+</html>

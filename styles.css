@@ -15,7 +15,7 @@ body {
 
 #calc {
     width: 400px;
-    padding: .5em;
+    padding: 0.5em;
     background-color: #ded8d7;
     display: flex;
     flex-direction: column;
@@ -54,8 +54,8 @@ body {
 }
 
 #buttons-container button {
-    border: 1px solid transparent;
-    border-radius: 0;
+    border: 1px solid #000000;
+    border-radius: 2px;
     height: 4em;
     font-size: 1.2em;
     background-color: #dbdbdb;

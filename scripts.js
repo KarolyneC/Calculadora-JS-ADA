@@ -11,6 +11,8 @@ class Calculator {
     }
 
     addDigit(digit) {
+        console.log(digit);
+
         if (digit === "." && this.currentOperationText.innerText.includes(".")) {
             return;
         }
@@ -20,21 +22,40 @@ class Calculator {
     }
 
     processOperation(operation) {
+
+        if (this.currentOperationText.innerText === "" && operation !== "C") {
+
+            if (this.previousOperationText.innerText !== "") {
+                this.changeOperation(operation);
+            }
+            
+            return;
+        }
         
         let operationValue;
-        let previous = +this.previousOperationText.innerText;
-        let current = +this.currentOperationText.innerText;
+        const previous = +this.previousOperationText.innerText;
+        const current = +this.currentOperationText.innerText;
 
         switch(operation) {
             case "+":
+                operationValue = previous + current
+                this.updateScreen(operationValue, operation, current, previous)
                 break;
+            case "-";
+                operationValue = previous - current;
+                this.updateScreen(operationValue, operation, current, previous);    
             default:
                 return;
         }
     }
 
-    updateScreen(operationValue = null, operation = null, current = null, previous = null) {
-        this.currentOperationText.innerText += this.currentOperation;
+    updateScreen(
+        operationValue = null, 
+        operation = null, 
+        current = null, 
+        previous = null) {
+       
+        console.log(operationValue, operation, current, previous)
     }
 
 }
